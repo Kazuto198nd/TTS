@@ -26,30 +26,30 @@
 <body>
     <div ><h2>Edit Thực tập sinh</h2>
     <form action="./edit" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="IDchar" value="<%- nhanvat._id %>">
+        <input type="hidden" name="IDchar" value="<%- sinhvien._id %>">
         <div class="form-row">
             <div class="form-group ">
-                <input type="text" value="<%- nhanvat.Name %>" name="txtName" placeholder="Name">
+                <input type="text" value="<%- sinhvien.Name %>" name="txtName" placeholder="Name">
             </div>
         </div>
         <div class="charactor">
-            <img src="upload/<%- nhanvat.Image%>" ><br>
+            <img src="upload/<%- sinhvien.Image%>" ><br>
         </div>
         <input type="file" name="studentImage">                                             <br>
 
         <div class="form-row">
             <div class="form-group ">
-                <input type="text" value="<%- nhanvat.Class %>" name="txtClass" placeholder="Class">
+                <input type="text" value="<%- sinhvien.Class %>" name="txtClass" placeholder="Class">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group ">
-                <input type="text" value="<%- nhanvat.MSV %>" name="txtMSV" placeholder="MSV">
+                <input type="text" value="<%- sinhvien.MSV %>" name="txtMSV" placeholder="MSV">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group ">
-                <input type="text" value="<%- nhanvat.Age %>" name="txtAge" placeholder="Age">
+                <input type="text" value="<%- sinhvien.Age %>" name="txtAge" placeholder="Age">
             </div>
         </div>
         <input class="btn btn-primary" type="submit" value="Edit">

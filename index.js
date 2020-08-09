@@ -98,7 +98,7 @@ app.get("/edit/:id" , function(req, res){
             res.json({"kq": 0,"errMsg": err});
         }else{
             console.log(char);
-            res.render("edit",{nhanvat:char});
+            res.render("edit",{sinhvien:char});
         }
     }); 
 });
