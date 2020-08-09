@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:3001"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            border: 1px solid white;
+            width: auto;
+        }
+        input{
+            margin: 9px;
+        }
+        .charactor img{border-radius: 50%; width: 200px; height: 200px;}
+    </style>
+</head>
+<body>
+    <div ><h2>Edit Thực tập sinh</h2>
+    <form action="./edit" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="IDchar" value="<%- nhanvat._id %>">
+        <div class="form-row">
+            <div class="form-group ">
+                <input type="text" value="<%- nhanvat.Name %>" name="txtName" placeholder="Name">
+            </div>
+        </div>
+        <div class="charactor">
+            <img src="upload/<%- nhanvat.Image%>" ><br>
+        </div>
+        <input type="file" name="studentImage">                                             <br>
+
+        <div class="form-row">
+            <div class="form-group ">
+                <input type="text" value="<%- nhanvat.Class %>" name="txtClass" placeholder="Class">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group ">
+                <input type="text" value="<%- nhanvat.MSV %>" name="txtMSV" placeholder="MSV">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group ">
+                <input type="text" value="<%- nhanvat.Age %>" name="txtAge" placeholder="Age">
+            </div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Edit">
+        <a href="/list" class="btn btn-primary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
